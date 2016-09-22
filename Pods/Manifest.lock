@@ -1,0 +1,43 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - FlourishUI (2.2.0)
+  - XLActionController (2.0.0):
+    - XLActionController/Core (= 2.0.0)
+  - XLActionController/Core (2.0.0)
+  - XLActionController/Tweetbot (2.0.0):
+    - XLActionController/Core
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - FlourishUI
+  - XLActionController
+  - XLActionController/Tweetbot
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  FlourishUI: 1fd45d4d645e83356e1ab2db5066feab375d8c67
+  XLActionController: 97ed31237413db4d9401c6a559270f4d2b4de136
+
+PODFILE CHECKSUM: 2b73910f6403863afcc840b0636fd4defef4f41e
+
+COCOAPODS: 1.0.1
