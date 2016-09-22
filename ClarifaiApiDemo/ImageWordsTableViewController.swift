@@ -64,20 +64,6 @@ class ImageWordsTableViewController: UITableViewController, UIPopoverPresentatio
  
     @IBAction func displayAvailableLanguages(sender: UIBarButtonItem) {
         
-        /*let overlay = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
-        
-        overlay.frame = view.frame
-        //overlay.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
-        view.addSubview(overlay)*/
-        
-        /*let blurEffect = UIBlurEffect(style: .Light)
-        
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        
-        blurEffectView.contentView.addSubview(view)
-        
-        view.addSubview(blurEffectView)*/
-        
     
             self.view.backgroundColor = UIColor.clearColor()
             

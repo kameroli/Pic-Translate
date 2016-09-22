@@ -16,7 +16,7 @@ class AboutUsViewController: UIViewController {
     
     override func viewDidLoad() {
         
-     aboutLabel.text = "Pic + Translate is an app created to help people who want to increase their english vocabulary by indentifying the content of pictures and describing them with words that will be translated into the language chosen"
+     aboutLabel.text = "Pic + Translate is an app created to help people who want to increase their english vocabulary by indentifying the content of pictures and describing them with words that will be translated into the language chosen"+"\n\nThe translation service is “Powered by Yandex.Translate” http://translate.yandex.com/"
         
         super.viewDidLoad()
 

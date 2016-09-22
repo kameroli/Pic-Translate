@@ -26,16 +26,8 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Modify view apparence
-        /*self.view.layer.borderColor = UIColor.lightGrayColor().CGColor
-        self.view.layer.cornerRadius = 10
-        self.view.layer.borderWidth = 0.5
-        view.layer.shadowColor = UIColor.blackColor().CGColor
-        view.layer.shadowOpacity = 0.2
-        view.layer.shadowOffset = CGSize(width: 0, height: 4)
-        view.layer.shadowRadius = 1
-        view.layer.shadowPath = UIBezierPath(rect: view.bounds).CGPath*/
-
+      
+        //Hide Navigation back button
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         //Back button appareance
@@ -144,13 +136,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }catch{ //First do{}
             print("Fetch failed")
         }
-        
-        //Dismiss the LanguageViewController
-        /*let tmpController = self.presentingViewController
-        
-        self.dismissViewControllerAnimated(false) { 
-            tmpController?.dismissViewControllerAnimated(false, completion: nil)
-        }*/
+    
         
         self.navigationController?.popViewControllerAnimated(true)
         
