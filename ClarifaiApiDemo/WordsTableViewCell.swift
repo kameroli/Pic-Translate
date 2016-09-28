@@ -69,7 +69,7 @@ class WordsTableViewCell: UITableViewCell {
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as? [String: AnyObject]
                 
                 if let translatedW = json!["text"] as? [String]{
-                    print(translatedW.count)
+                    //print(translatedW.count)
                     
                     if translatedW.count > 1{
                         wordInOtherLanguage = translatedW.joinWithSeparator(" ")}else{
@@ -86,8 +86,10 @@ class WordsTableViewCell: UITableViewCell {
             
             dispatch_async(dispatch_get_main_queue(), {
                 
+                var settings = Modal.Settings()
                 
-                Modal(title: self.wordLabel.text! , body: "________________\n\n" + wordInOtherLanguage + "\n", status: .Success).show()
+                settings.bodyHeight = 200
+                Modal(title: self.wordLabel.text! , body: "________________\n\n" + wordInOtherLanguage + "\n" + "Powered by yandex.translate", status: .Success, settings:settings).show()
                 
 
              })

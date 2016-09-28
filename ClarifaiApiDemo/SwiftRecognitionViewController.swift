@@ -154,8 +154,6 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
             imageView.image = image
             textView.text = "Recognizing..."
             button.enabled = false
-            translateButton.enabled = true
-            
             recognizeImage(image)
            
         }
@@ -182,6 +180,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
             } else {
                 self.textView.text = "Words:\n\n" + results![0].tags.joinWithSeparator(", ")
                 arrayOfTags = results![0].tags
+                self.translateButton.enabled = true
                 
                 
             }

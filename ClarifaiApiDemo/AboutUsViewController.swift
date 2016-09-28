@@ -11,17 +11,25 @@ import UIKit
 class AboutUsViewController: UIViewController {
 
     
-    @IBOutlet weak var aboutLabel: UILabel!
+    @IBOutlet weak var aboutTextView: UITextView!
     
     
     override func viewDidLoad() {
         
-     aboutLabel.text = "Pic + Translate is an app created to help people who want to increase their english vocabulary by indentifying the content of pictures and describing them with words that will be translated into the language chosen"+"\n\nThe translation service is “Powered by Yandex.Translate” http://translate.yandex.com/"
+     aboutTextView.text = "Pic + Translate is an app created to help people who want to increase their english vocabulary by indentifying the content of pictures and describing them with words that will be translated into the language chosen"
         
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func openLink(sender: AnyObject) {
+        
+        UIApplication.sharedApplication().openURL(NSURL(string:"http://translate.yandex.com/")!)
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

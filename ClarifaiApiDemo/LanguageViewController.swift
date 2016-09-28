@@ -9,8 +9,8 @@
 import UIKit
 import CoreData
 
-var selectedLanguage = "es"
-var languageName = "Spanish"
+var selectedLanguage = "en"
+var languageName = "English"
 
 class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource, UITableViewDelegate {
 
@@ -20,7 +20,10 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var languagePicker: UIPickerView!
     var pickerData: [(language: String, short: String)] = []
     var recentLanguagesStored:[(longName:String, shortName: String)] = []
+    var showRecentLanguages:[(longName:String, shortName: String)] = []
     let languageCellIdentifier = "LanguageCell"
+    
+    
     
     
     override func viewDidLoad() {
@@ -33,6 +36,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //Back button appareance
         backAndSaveLanguageButton.backgroundColor = UIColor(red: 251/255, green: 127/255, blue: 6/255, alpha: 1)
         
+        
         //Connect data:
         languagePicker.delegate = self
         languagePicker.dataSource = self
@@ -43,8 +47,16 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         loadDataIntoPicker()
         loadRecentLanguagesStored()
         
+        showRecentLanguages = recentLanguagesStored.reverse()
+
         
         
+    }
+    
+    
+    @IBAction func cancelButtonClicked(sender: AnyObject) {
+        
+     self.navigationController?.popViewControllerAnimated(true)
     }
     
     
@@ -65,9 +77,9 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             
             if results.count == 0 {
                 
-                print("Saving new Language because there is nothing in database")
+                //Saving new Language because there is nothing in database
                 
-                let newLanguage = NSEntityDescription.insertNewObjectForEntityForName("RecentLanguages", inManagedObjectContext: context)
+                let newLanguage = NSEntityDescription.insertNewObjectForEntityForName("RecentLanguages", inManagedObjectContext: context) 
                 
                 newLanguage.setValue(selectedLanguage, forKey: "language")
                 newLanguage.setValue(languageName, forKey: "lanName")
@@ -90,7 +102,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                     
                     if existingLanguage.count == 0 {
                         
-                        print("Saving new language")
+                        //Saving new language
                         
                         let newLanguage = NSEntityDescription.insertNewObjectForEntityForName("RecentLanguages", inManagedObjectContext: context)
                         
@@ -104,9 +116,9 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                         }
                         
                         //Making sure the entity only has 3 languages stored
-                        if results.count > 2 {
+                        if results.count > 3 {
                             
-                            print("There are more than 3 languages stored in the database")
+                            //There are more than 3 languages stored in the database
                             
                                 context.deleteObject((results.first)! as! NSManagedObject)
                             
@@ -116,17 +128,9 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                                     print("there was a problem saving")
                                 }
                  
-                        }//Closing if results > 3
+                        }//Closing if results > 3 ....For testing purposes, add an else statement
                         
-                    }else{
-                        print("Language already stored in database")
-                        
-                        for language in results as! [NSManagedObject]{
-                            print(language.valueForKey("language")!)
-                            print(language.valueForKey("lanName")!)
-                        }
-                        
-                    }//Closing existingLanguage else
+                    }
                     
                 }catch{
                     print("Fetch failed")
@@ -147,7 +151,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     //Load languages into Picker
     func loadDataIntoPicker(){
         
-        pickerData = [("Spanish", "es"), ("English", "en"), ("German", "de"), ("French", "fr"), ("Italian", "it"), ("Polish", "pl"), ("Portuguese", "pt"), ("Russian", "ru"), ("Japanese", "ja"), ("Chinese", "zh")]
+        pickerData = [("Spanish", "es"),("Albanian","sq"),("Arabic","ar"),("Armenian","hy"), ("Belarusian","be"), ("Bulgarian","bg"), ("Bosnian","bs"), ("Chinese", "zh"), ("Croatian","hr"), ("Czech","cs"), ("Dutch","nl"), ("Danish","da"), ("Estonian","et"),  ("French", "fr"), ("Finnish","fi"), ("German", "de"), ("Greek","el"), ("Georgian","ka"), ("Hebrew","he"), ("Hungarian","hu"), ("Indonesian","id"), ("Italian", "it"), ("Japanese", "ja"), ("Korean","ko"), ("Lithuanian","lt"), ("Maltese","mt"), ("Mongolian","mn"), ("Nepali","ne"), ("Norwegian","no"), ("Polish", "pl"), ("Portuguese", "pt"), ("Romanian","ro"), ("Russian", "ru"), ("Serbian","sr"), ("Slovakian","sk"), ("Slovenian","sl"), ("Swedish","sv"),  ("Thai","th"), ("Turkish","tr"), ("Ukrainian","uk"), ("Vietnamese","vi") ]
         
     }
     
@@ -167,7 +171,6 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             
             if results.count > 0 {
                 for result in results{
-                    //recentLanguagesStored.append(result.valueForKey("language") as! String)
                     recentLanguagesStored.append((result.valueForKey("lanName") as! String, result.valueForKey("language") as! String))
                 }
             }
@@ -175,11 +178,6 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             print("Fetch failed")
         }
         
-        print(recentLanguagesStored)
-        
-
-        
-
     }
     
     
@@ -208,7 +206,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return pickerData.count
     }
     
-    //The data to retunr for the row and component (column) that's beign passed in
+    //The data to return for the row and component (column) that's beign passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row].language
     }
@@ -219,7 +217,6 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         selectedLanguage = pickerData[row].short
         languageName = pickerData[row].language
         
-        print(selectedLanguage)
     }
     
     
@@ -234,11 +231,13 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(languageCellIdentifier, forIndexPath: indexPath)
         
         let row = indexPath.row
         
-        cell.textLabel?.text = recentLanguagesStored[row].longName
+        cell.textLabel?.text = showRecentLanguages[row].longName
+
         
         return cell
     }
@@ -246,14 +245,8 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
        
-        selectedLanguage = recentLanguagesStored[indexPath.row].shortName
-        
-        /*let tmpController = self.presentingViewController
-        
-        self.dismissViewControllerAnimated(false) {
-            tmpController?.dismissViewControllerAnimated(true, completion: nil)
+        selectedLanguage = showRecentLanguages[indexPath.row].shortName
 
-        }*/
         
         self.navigationController?.popViewControllerAnimated(true)
     }

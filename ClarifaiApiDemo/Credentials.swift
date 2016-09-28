@@ -14,8 +14,9 @@ import Foundation
 // credentials -- we're including these here so you can get started out of the box, but this is
 // generally a bad practice.
 let clarifaiClientID = "CUnWfeKR9C2FyBvjLZwuumEBDztv_gqzw4TukmD3"
+//let clarifaiClientID = "Yp49hbZxO8-vGjbrq7kDVrqQCznjkSc38rFfOeLh"
 let clarifaiClientSecret = "KvqSM_ZoChUr1DEDsYYG1QpfXPzY-ECS9XfeGj9L"
-
+//let clarifaiClientSecret = "bw-t06K8taSmwvpQcvuGN7yHJTrmigJMqKVGeqYh-ECS9XfeGj9L"
 
 @objc class Credentials : NSObject {
   class func clientID() -> String { return clarifaiClientID }

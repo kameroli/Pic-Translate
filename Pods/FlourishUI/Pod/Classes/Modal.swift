@@ -17,7 +17,7 @@ public class Modal: UIViewController
   private var status: Status = .Notice
   private var durationTimer: NSTimer!
   private var _bodyHeight: CGFloat = 90
-  private var _height: CGFloat = 178
+  private var _height: CGFloat = 178 //Make dialog bigger
 
   var width: CGFloat {
     var width = (view.frame.width - 2 * _settings.padding)
@@ -84,7 +84,7 @@ public class Modal: UIViewController
       equalAspectRatio = false
       borderRadius = 5
       borderWidth = 0.5
-      height = 178
+      height = 178  //Make dialog bigger
       maxWidth = 300
       titleHeight = 40
       bodyHeight = 90
@@ -254,7 +254,7 @@ public class Modal: UIViewController
       _overlay.frame = rv.bounds
           
       // Subtitle: adjusts to text view size
-      let r = bodyLabel.text.boundingRectWithSize(CGSize(width: width - 2 * _settings.padding, height: 90),
+      let r = bodyLabel.text.boundingRectWithSize(CGSize(width: width - 2 * _settings.padding, height: 90+60),
         options: .UsesLineFragmentOrigin,
         attributes: [NSFontAttributeName: Font.text],
         context: nil)

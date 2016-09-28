@@ -3,11 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+            <string>Montserrat-Light</string>
+            <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
@@ -29,10 +31,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InitialImage" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-07-eJf">
-                                <rect key="frame" x="0.0" y="64" width="414" height="350"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InitialImage" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-07-eJf">
+                                <rect key="frame" x="0.0" y="64" width="414" height="330"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="wTd-07-eJf" secondAttribute="height" multiplier="1:1" constant="64" id="Wvw-eU-JUW"/>
+                                    <constraint firstAttribute="height" constant="330" id="opN-OM-vzo"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="center" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCz-LP-z0k">
@@ -51,7 +53,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Select Pics to start and press Translate" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-fU-VA6">
-                                <rect key="frame" x="10" y="424" width="394" height="182"/>
+                                <rect key="frame" x="10" y="404" width="394" height="212"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
@@ -71,22 +73,19 @@
                                     <segue destination="TpF-F2-g8q" kind="show" id="npL-j7-Bji"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIG-27-lRy">
-                                <rect key="frame" x="45" y="-64" width="154" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mrp-AJ-h1V" firstAttribute="leading" secondItem="dCz-LP-z0k" secondAttribute="trailing" id="4hf-BX-F1t"/>
                             <constraint firstItem="7P2-fU-VA6" firstAttribute="top" secondItem="wTd-07-eJf" secondAttribute="bottom" constant="10" id="7Gn-Va-yxR"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Mrp-AJ-h1V" secondAttribute="bottom" id="7Ig-Zh-dDI"/>
-                            <constraint firstItem="Mrp-AJ-h1V" firstAttribute="top" secondItem="7P2-fU-VA6" secondAttribute="bottom" constant="30" id="9ve-FB-awN"/>
+                            <constraint firstItem="Mrp-AJ-h1V" firstAttribute="top" secondItem="7P2-fU-VA6" secondAttribute="bottom" constant="20" id="9ve-FB-awN"/>
                             <constraint firstItem="7P2-fU-VA6" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="10" id="DrQ-RN-a79"/>
-                            <constraint firstItem="wTd-07-eJf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="HdR-Wb-ouy"/>
                             <constraint firstItem="Mrp-AJ-h1V" firstAttribute="width" secondItem="dCz-LP-z0k" secondAttribute="width" id="HdU-TG-d6d"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dCz-LP-z0k" secondAttribute="bottom" id="HhD-nV-Acl"/>
                             <constraint firstItem="7P2-fU-VA6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-10" id="HqO-0z-CNn"/>
                             <constraint firstItem="wTd-07-eJf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="Orv-UE-vuh"/>
+                            <constraint firstItem="wTd-07-eJf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="bGr-lt-6J7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wTd-07-eJf" secondAttribute="trailing" constant="-20" id="fHW-zk-TUW"/>
                             <constraint firstItem="dCz-LP-z0k" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="mpj-KW-fdU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mrp-AJ-h1V" secondAttribute="trailing" constant="-20" id="y7U-4w-siN"/>
@@ -123,23 +122,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="39" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIc-U6-KXE">
-                                <rect key="frame" x="20" y="214" width="374" height="502"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-QB-SUr">
+                                <rect key="frame" x="77" y="101" width="261" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="9iO-Ew-WTh"/>
+                                    <constraint firstAttribute="height" constant="84" id="jiw-uf-pPf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 001 (2016)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gun-2d-abI">
+                                <rect key="frame" x="142" y="195" width="131" height="18"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yfu-C9-b3h">
+                                <rect key="frame" x="20" y="243" width="374" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="QLD-IL-IfZ"/>
+                                </constraints>
+                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016 Pic + Translate. All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FA-QR-ucK">
+                                <rect key="frame" x="20" y="711" width="374" height="17"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation is “Powered by Yandex.Translate”" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj0-uk-gfF">
+                                <rect key="frame" x="20" y="403" width="374" height="18"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ab2-vc-HnB">
+                                <rect key="frame" x="20" y="431" width="193" height="30"/>
+                                <state key="normal" title="http://translate.yandex.com/"/>
+                                <connections>
+                                    <action selector="openLink:" destination="Kmf-eR-oCj" eventType="touchUpInside" id="ovw-hM-Swh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MGW-Lc-4Op" firstAttribute="top" secondItem="jIc-U6-KXE" secondAttribute="bottom" constant="20" id="af0-ZL-ZUz"/>
-                            <constraint firstItem="jIc-U6-KXE" firstAttribute="top" secondItem="Ehz-Ft-Uaz" secondAttribute="bottom" constant="150" id="kNK-ZW-yml"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jIc-U6-KXE" secondAttribute="trailing" id="moK-cT-gUm"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="jIc-U6-KXE" secondAttribute="leading" id="wJ8-Dh-87c"/>
+                            <constraint firstItem="vj0-uk-gfF" firstAttribute="top" secondItem="Yfu-C9-b3h" secondAttribute="bottom" constant="10" id="0a5-Tb-r7w"/>
+                            <constraint firstItem="pqH-QB-SUr" firstAttribute="centerX" secondItem="dRA-Kw-8jf" secondAttribute="centerX" id="2sp-at-mkf"/>
+                            <constraint firstItem="Gun-2d-abI" firstAttribute="top" secondItem="pqH-QB-SUr" secondAttribute="bottom" constant="10" id="9wu-Bl-kgC"/>
+                            <constraint firstItem="Yfu-C9-b3h" firstAttribute="top" secondItem="Gun-2d-abI" secondAttribute="bottom" constant="30" id="O0v-Gw-j4O"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Yfu-C9-b3h" secondAttribute="leading" id="Qgv-Ld-Yac"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yfu-C9-b3h" secondAttribute="trailing" id="Ro0-dr-x0T"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3FA-QR-ucK" secondAttribute="leading" id="TD5-dn-K8i"/>
+                            <constraint firstItem="MGW-Lc-4Op" firstAttribute="top" secondItem="3FA-QR-ucK" secondAttribute="bottom" constant="8" id="X36-06-XPH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ab2-vc-HnB" secondAttribute="leading" id="caG-cA-UW8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3FA-QR-ucK" secondAttribute="trailing" id="rYa-fZ-wic"/>
+                            <constraint firstItem="pqH-QB-SUr" firstAttribute="top" secondItem="Ehz-Ft-Uaz" secondAttribute="bottom" constant="37" id="sLy-qB-c4L"/>
+                            <constraint firstItem="Gun-2d-abI" firstAttribute="centerX" secondItem="dRA-Kw-8jf" secondAttribute="centerX" id="tXx-pd-QKm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vj0-uk-gfF" secondAttribute="trailing" id="wX0-UL-MSh"/>
+                            <constraint firstItem="Ab2-vc-HnB" firstAttribute="top" secondItem="vj0-uk-gfF" secondAttribute="bottom" constant="10" id="xX9-R5-cXg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vj0-uk-gfF" secondAttribute="leading" id="yHj-ne-slH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="aboutLabel" destination="jIc-U6-KXE" id="zqn-rI-4Ww"/>
+                        <outlet property="aboutTextView" destination="Yfu-C9-b3h" id="L2g-JT-PHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGR-Hh-Lfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,6 +375,13 @@
                             <constraint firstItem="x6L-SI-DHJ" firstAttribute="top" secondItem="NVN-Nq-3Qg" secondAttribute="bottom" constant="15" id="y23-ks-99M"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Available Languages" id="Q9X-R6-lFC">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="mbp-3U-rtH">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="1EN-bj-YEj" id="gGb-Ar-CBK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -404,6 +457,7 @@
         <image name="Images" width="63" height="76"/>
         <image name="InitialImage" width="750" height="750"/>
         <image name="Language" width="93" height="76"/>
+        <image name="Logo" width="490" height="126"/>
         <image name="Translate" width="84" height="72"/>
     </resources>
 </document>

@@ -68,30 +68,7 @@ class TranslateViewController: UIViewController, UIPopoverPresentationController
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-   /* override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "popoverSegue" {
-            
-            let vc = segue.destinationViewController
-            
-            let controller = vc.popoverPresentationController
-            
-            if controller != nil {
-                controller?.permittedArrowDirections = .Down
-                controller?.delegate = self
-                controller?.sourceView = self.view
-                controller?.sourceRect = CGRectMake(self.availableLanguages.frame.width/2, self.view.frame.height - self.availableLanguages.frame.height, 1, 1)
-             
-            }
-        }
-        
-        
-      
-    }
-    
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
-    }*/
+
     
 
 }

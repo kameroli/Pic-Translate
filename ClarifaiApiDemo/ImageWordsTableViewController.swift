@@ -61,28 +61,6 @@ class ImageWordsTableViewController: UITableViewController, UIPopoverPresentatio
        
     }
     
- 
-    @IBAction func displayAvailableLanguages(sender: UIBarButtonItem) {
-        
-    
-            self.view.backgroundColor = UIColor.clearColor()
-            
-            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-            let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            //always fill the view
-            blurEffectView.frame = self.view.bounds
-            blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-            
-            self.view.addSubview(blurEffectView)
-        self.performSegueWithIdentifier("showLanguages", sender: self)
-        
-        
-        
-    }
-    
-    
-    
-    
 
     /*
     // Override to support conditional editing of the table view.
@@ -123,25 +101,4 @@ class ImageWordsTableViewController: UITableViewController, UIPopoverPresentatio
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showLanguages"{
-            
-            let vc = segue.destinationViewController 
-            
-            let controller = vc.popoverPresentationController
-            
-            
-            if controller != nil{
-                controller?.delegate = self
-                controller?.permittedArrowDirections = .Up
-                
-
-            }
-        }
-    }
-    
-
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
-    }
-}
+   }
