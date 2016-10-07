@@ -89,7 +89,7 @@ class WordsTableViewCell: UITableViewCell {
                 var settings = Modal.Settings()
                 
                 settings.bodyHeight = 200
-                Modal(title: self.wordLabel.text! , body: "________________\n\n" + wordInOtherLanguage + "\n" + "Powered by yandex.translate", status: .Success, settings:settings).show()
+                Modal(title: wordInOtherLanguage + "\n________________", body:   self.wordLabel.text! + "\n\n" + "powered by yandex.translate", status: .Success, settings:settings).show()
                 
 
              })

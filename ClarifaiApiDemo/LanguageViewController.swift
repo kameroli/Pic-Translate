@@ -47,10 +47,9 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         loadDataIntoPicker()
         loadRecentLanguagesStored()
         
+        languagePicker.selectRow(11, inComponent: 0, animated: false)
         showRecentLanguages = recentLanguagesStored.reverse()
 
-        
-        
     }
     
     
@@ -151,7 +150,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     //Load languages into Picker
     func loadDataIntoPicker(){
         
-        pickerData = [("Spanish", "es"),("Albanian","sq"),("Arabic","ar"),("Armenian","hy"), ("Belarusian","be"), ("Bulgarian","bg"), ("Bosnian","bs"), ("Chinese", "zh"), ("Croatian","hr"), ("Czech","cs"), ("Dutch","nl"), ("Danish","da"), ("Estonian","et"),  ("French", "fr"), ("Finnish","fi"), ("German", "de"), ("Greek","el"), ("Georgian","ka"), ("Hebrew","he"), ("Hungarian","hu"), ("Indonesian","id"), ("Italian", "it"), ("Japanese", "ja"), ("Korean","ko"), ("Lithuanian","lt"), ("Maltese","mt"), ("Mongolian","mn"), ("Nepali","ne"), ("Norwegian","no"), ("Polish", "pl"), ("Portuguese", "pt"), ("Romanian","ro"), ("Russian", "ru"), ("Serbian","sr"), ("Slovakian","sk"), ("Slovenian","sl"), ("Swedish","sv"),  ("Thai","th"), ("Turkish","tr"), ("Ukrainian","uk"), ("Vietnamese","vi") ]
+        pickerData = [("Albanian","sq"),("Arabic","ar"),("Armenian","hy"), ("Belarusian","be"), ("Bulgarian","bg"), ("Bosnian","bs"), ("Chinese", "zh"), ("Croatian","hr"), ("Czech","cs"), ("Dutch","nl"), ("Danish","da"), ("English", "en"), ("Estonian","et"),  ("French", "fr"), ("Finnish","fi"), ("German", "de"), ("Greek","el"), ("Georgian","ka"), ("Hebrew","he"), ("Hungarian","hu"), ("Indonesian","id"), ("Italian", "it"), ("Japanese", "ja"), ("Korean","ko"), ("Lithuanian","lt"), ("Maltese","mt"), ("Mongolian","mn"), ("Nepali","ne"), ("Norwegian","no"), ("Polish", "pl"), ("Portuguese", "pt"), ("Romanian","ro"), ("Russian", "ru"), ("Serbian","sr"), ("Slovakian","sk"), ("Slovenian","sl"), ("Spanish", "es"), ("Swedish","sv"),  ("Thai","th"), ("Turkish","tr"), ("Ukrainian","uk"), ("Vietnamese","vi") ]
         
     }
     
@@ -188,7 +187,6 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -220,7 +218,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     
-    //Tableview function prototypes
+    //Tableview
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -232,12 +230,11 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(languageCellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(languageCellIdentifier, forIndexPath: indexPath) as! RecentLanguageTableViewCell
         
         let row = indexPath.row
         
-        cell.textLabel?.text = showRecentLanguages[row].longName
-
+        cell.languageLabel.text = showRecentLanguages[row].longName
         
         return cell
     }

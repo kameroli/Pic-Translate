@@ -14,10 +14,11 @@ public class Modal: UIViewController
   private var titleLabel = UILabel()
   private var bodyLabel = UITextView()
   private var dismissButton = ModalButton(frame: CGRect())
+  private var yandexButton = ModalButton(frame: CGRect())
   private var status: Status = .Notice
   private var durationTimer: NSTimer!
-  private var _bodyHeight: CGFloat = 90
-  private var _height: CGFloat = 178 //Make dialog bigger
+  private var _bodyHeight: CGFloat = 70
+  private var _height: CGFloat = 178 + 30 //Make dialog bigger
 
   var width: CGFloat {
     var width = (view.frame.width - 2 * _settings.padding)
@@ -84,11 +85,11 @@ public class Modal: UIViewController
       equalAspectRatio = false
       borderRadius = 5
       borderWidth = 0.5
-      height = 178  //Make dialog bigger
+      height = 178 + 30  //Make dialog bigger
       maxWidth = 300
-      titleHeight = 40
-      bodyHeight = 90
-      margin = 20
+      titleHeight = 70
+      bodyHeight = 70
+      margin = 10
       padding = 20
       buttonHeight = 40
       buttonCornerRadius = 3
@@ -116,9 +117,9 @@ public class Modal: UIViewController
   
   public struct Font
   {
-    static var header = UIFont(name: "Montserrat", size: 20.0)!
+    static var header = UIFont(name: "Montserrat", size: 21.0)!
     static var text = UIFont(name: "Montserrat", size: 18.0)!
-    static var button = UIFont(name: "Montserrat", size: 18.0)!
+    static var button = UIFont(name: "Montserrat", size: 20.0)!
   }
   
   class ModalButton: Button
@@ -164,7 +165,7 @@ public class Modal: UIViewController
     
     // Title
     titleLabel.textColor = _settings.titleColor
-    titleLabel.numberOfLines = 1
+    titleLabel.numberOfLines = 2
     titleLabel.textAlignment = .Center
     titleLabel.font = Font.header
     titleLabel.frame = CGRect(x: _settings.padding, y: _settings.padding, width: width - 2 * _settings.padding, height: _settings.titleHeight)
@@ -180,6 +181,16 @@ public class Modal: UIViewController
     bodyLabel.font = Font.text
     dialog.addSubview(bodyLabel)
     
+    //Yandex Button
+    yandexButton.setTitle("http://translate.yandex.com/", forState: .Normal)
+    yandexButton.titleLabel?.font = UIFont(name: "Montserrat", size: 15.0)!
+    yandexButton.actionType = Action.Selector
+    yandexButton.target = self
+    yandexButton.selector = #selector(self.hide)
+    yandexButton.addTarget(self, action: #selector(self.openUlr(_:)), forControlEvents: .TouchUpInside)
+    dialog.addSubview(yandexButton)
+
+
     // Button
     dismissButton.setTitle(_settings.dismissText, forState: .Normal)
     dismissButton.titleLabel?.font = Font.button
@@ -221,9 +232,12 @@ public class Modal: UIViewController
     let w = width - (2 * _settings.padding)
     
     bodyLabel.frame = CGRect(x: x, y: y, width: w, height: _bodyHeight)
-    dismissButton.frame = CGRect(x: x, y: y + _bodyHeight + _settings.padding, width: w, height: _settings.buttonHeight)
+    dismissButton.frame = CGRect(x: x, y: y + _bodyHeight + _settings.padding + 20, width: w, height: _settings.buttonHeight)
     dismissButton.backgroundColor = metaForStatus(status).color
     dismissButton.layer.masksToBounds = true
+    yandexButton.frame = CGRect(x: x, y: y + _bodyHeight + 5, width: w, height: 20)
+    yandexButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
+    yandexButton.layer.masksToBounds = true
   }
   
   func buttonTapped(btn: ModalButton)
@@ -236,11 +250,15 @@ public class Modal: UIViewController
         let ctrl = UIControl()
         ctrl.sendAction(btn.selector, to:btn.target, forEvent:nil)
       default :
-        print("Unknow action type for button")
+        print("Unknown action type for button")
     }
-
     hide()
   }
+    
+    func openUlr(btn:ModalButton){
+        UIApplication.sharedApplication().openURL(NSURL(string:"http://translate.yandex.com/")!)
+    }
+    
   
   public func show(duration: NSTimeInterval = 0) -> Modal
   {
@@ -254,7 +272,7 @@ public class Modal: UIViewController
       _overlay.frame = rv.bounds
           
       // Subtitle: adjusts to text view size
-      let r = bodyLabel.text.boundingRectWithSize(CGSize(width: width - 2 * _settings.padding, height: 90+60),
+      let r = bodyLabel.text.boundingRectWithSize(CGSize(width: width - 2 * _settings.padding, height: 70),
         options: .UsesLineFragmentOrigin,
         attributes: [NSFontAttributeName: Font.text],
         context: nil)

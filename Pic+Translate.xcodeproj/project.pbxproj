@@ -11,7 +11,7 @@
 		0F88D1D41D6A2A6E00C14492 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88D1D31D6A2A6E00C14492 /* TranslateViewController.swift */; };
 		0F9399461D8CEF8700D2F682 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9399451D8CEF7500D2F682 /* Montserrat-Light.otf */; };
 		0F9DBF5D1D80F0FB00CD234B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9DBF5C1D80F0FB00CD234B /* AboutUsViewController.swift */; };
-		0FF905DF1D8644F6005D7189 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF905DE1D8644F6005D7189 /* LanguagesTableViewController.swift */; };
+		0FCC9ABA1D9C942D00837EE6 /* RecentLanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC9AB91D9C942D00837EE6 /* RecentLanguageTableViewCell.swift */; };
 		36A0125DEE5884EC15373B84 /* Pods_ClarifaiApiDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA718DB5DA0E30D572830BB1 /* Pods_ClarifaiApiDemoTests.framework */; };
 		4032B3FE1C57AEBA0093FA9E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4032B3FD1C57AEBA0093FA9E /* Credentials.swift */; };
 		404EFC761BACA33F009D4381 /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 404EFC751BACA33F009D4381 /* ClarifaiClient.m */; };
@@ -43,7 +43,7 @@
 		0F88D1D31D6A2A6E00C14492 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		0F9399451D8CEF7500D2F682 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.otf"; path = "../../../../../Downloads/montserrat/Montserrat-Light.otf"; sourceTree = "<group>"; };
 		0F9DBF5C1D80F0FB00CD234B /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
-		0FF905DE1D8644F6005D7189 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
+		0FCC9AB91D9C942D00837EE6 /* RecentLanguageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentLanguageTableViewCell.swift; sourceTree = "<group>"; };
 		4032B3FD1C57AEBA0093FA9E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		404EFC741BACA33F009D4381 /* ClarifaiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClarifaiClient.h; sourceTree = "<group>"; };
 		404EFC751BACA33F009D4381 /* ClarifaiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClarifaiClient.m; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				B7545A1E1CE21B2300506865 /* ImageWordsTableViewController.swift */,
 				B7545A181CE1498D00506865 /* WordsTableViewCell.swift */,
 				0F4212781D4ED3C200936AF5 /* LanguageViewController.swift */,
-				0FF905DE1D8644F6005D7189 /* LanguagesTableViewController.swift */,
+				0FCC9AB91D9C942D00837EE6 /* RecentLanguageTableViewCell.swift */,
 				0F88D1D31D6A2A6E00C14492 /* TranslateViewController.swift */,
 				408D39651BACA1FA00C5608B /* Images.xcassets */,
 				408D39671BACA1FA00C5608B /* LaunchScreen.xib */,
@@ -394,9 +394,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F9DBF5D1D80F0FB00CD234B /* AboutUsViewController.swift in Sources */,
-				0FF905DF1D8644F6005D7189 /* LanguagesTableViewController.swift in Sources */,
 				B7A373981CE23E3E006F079D /* MultimediaData.xcdatamodeld in Sources */,
 				B7545A191CE1498D00506865 /* WordsTableViewCell.swift in Sources */,
+				0FCC9ABA1D9C942D00837EE6 /* RecentLanguageTableViewCell.swift in Sources */,
 				4032B3FE1C57AEBA0093FA9E /* Credentials.swift in Sources */,
 				404EFC761BACA33F009D4381 /* ClarifaiClient.m in Sources */,
 				B7A373951CE23258006F079D /* AppDelegate.swift in Sources */,

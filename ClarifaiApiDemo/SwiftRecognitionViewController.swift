@@ -105,6 +105,7 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
             })
             
         }))
+        
     
         actionController.addAction(Action("Take Photo", style: .Default, handler: {action in
             actionController.dismissViewControllerAnimated(true, completion: {

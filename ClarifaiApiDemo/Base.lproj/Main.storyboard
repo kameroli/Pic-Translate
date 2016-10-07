@@ -16,6 +16,7 @@
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
             <string>Montserrat-Light</string>
+            <string>Montserrat-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -151,15 +152,17 @@
                                 <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation is “Powered by Yandex.Translate”" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj0-uk-gfF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translation is “Powered by Yandex.Translate”" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj0-uk-gfF">
                                 <rect key="frame" x="20" y="403" width="374" height="18"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ab2-vc-HnB">
-                                <rect key="frame" x="20" y="431" width="193" height="30"/>
-                                <state key="normal" title="http://translate.yandex.com/"/>
+                                <rect key="frame" x="111" y="426" width="193" height="30"/>
+                                <state key="normal" title="http://translate.yandex.com/">
+                                    <color key="titleColor" red="0.98282822989999996" green="0.5" blue="0.024879404359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="openLink:" destination="Kmf-eR-oCj" eventType="touchUpInside" id="ovw-hM-Swh"/>
                                 </connections>
@@ -175,12 +178,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Yfu-C9-b3h" secondAttribute="trailing" id="Ro0-dr-x0T"/>
                             <constraint firstAttribute="leadingMargin" secondItem="3FA-QR-ucK" secondAttribute="leading" id="TD5-dn-K8i"/>
                             <constraint firstItem="MGW-Lc-4Op" firstAttribute="top" secondItem="3FA-QR-ucK" secondAttribute="bottom" constant="8" id="X36-06-XPH"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Ab2-vc-HnB" secondAttribute="leading" id="caG-cA-UW8"/>
+                            <constraint firstItem="Ab2-vc-HnB" firstAttribute="centerX" secondItem="dRA-Kw-8jf" secondAttribute="centerX" id="p0i-8R-B4J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3FA-QR-ucK" secondAttribute="trailing" id="rYa-fZ-wic"/>
                             <constraint firstItem="pqH-QB-SUr" firstAttribute="top" secondItem="Ehz-Ft-Uaz" secondAttribute="bottom" constant="37" id="sLy-qB-c4L"/>
                             <constraint firstItem="Gun-2d-abI" firstAttribute="centerX" secondItem="dRA-Kw-8jf" secondAttribute="centerX" id="tXx-pd-QKm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vj0-uk-gfF" secondAttribute="trailing" id="wX0-UL-MSh"/>
-                            <constraint firstItem="Ab2-vc-HnB" firstAttribute="top" secondItem="vj0-uk-gfF" secondAttribute="bottom" constant="10" id="xX9-R5-cXg"/>
+                            <constraint firstItem="Ab2-vc-HnB" firstAttribute="top" secondItem="vj0-uk-gfF" secondAttribute="bottom" constant="5" id="xX9-R5-cXg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="vj0-uk-gfF" secondAttribute="leading" id="yHj-ne-slH"/>
                         </constraints>
                     </view>
@@ -303,12 +306,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Languages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6L-SI-DHJ">
-                                <rect key="frame" x="17" y="59" width="382" height="22"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="18"/>
-                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTx-QF-lEJ">
                                 <rect key="frame" x="50" y="676" width="314" height="40"/>
                                 <constraints>
@@ -322,17 +319,32 @@
                                     <action selector="saveSelectedLanguage:" destination="1EN-bj-YEj" eventType="touchUpInside" id="Ko9-IE-36T"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lUc-He-pSt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lUc-He-pSt">
                                 <rect key="frame" x="20" y="101" width="374" height="268"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.98282822989999996" green="0.5" blue="0.024879404359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LanguageCell" focusStyle="custom" rowHeight="31" id="DqM-5Y-mgO">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="31"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LanguageCell" focusStyle="custom" rowHeight="40" id="DqM-5Y-mgO" customClass="RecentLanguageTableViewCell" customModule="Pic_Translate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DqM-5Y-mgO" id="BCF-p8-iJI">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1M-9A-GYB">
+                                                    <rect key="frame" x="19" y="5" width="355" height="26"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                                    <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.98282822989999996" green="0.5" blue="0.024879404359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="languageLabel" destination="V1M-9A-GYB" id="lUI-OV-0Lh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -353,6 +365,13 @@
                                     <outlet property="delegate" destination="wAR-AJ-9Qm" id="8DA-oB-ruc"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Languages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6L-SI-DHJ">
+                                <rect key="frame" x="16" y="59" width="382" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="6"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -362,8 +381,8 @@
                             <constraint firstAttribute="leadingMargin" secondItem="lUc-He-pSt" secondAttribute="leading" id="Edr-b7-UnV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OTx-QF-lEJ" secondAttribute="trailing" constant="30" id="FR4-01-fCB"/>
                             <constraint firstItem="OTx-QF-lEJ" firstAttribute="leading" secondItem="wAR-AJ-9Qm" secondAttribute="leadingMargin" constant="30" id="VWT-4J-ipE"/>
-                            <constraint firstItem="x6L-SI-DHJ" firstAttribute="leading" secondItem="wAR-AJ-9Qm" secondAttribute="leadingMargin" constant="-3" id="c3Z-cd-tPk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="x6L-SI-DHJ" secondAttribute="trailing" constant="-5" id="drT-ko-884"/>
+                            <constraint firstItem="x6L-SI-DHJ" firstAttribute="leading" secondItem="wAR-AJ-9Qm" secondAttribute="leadingMargin" constant="-4" id="c3Z-cd-tPk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x6L-SI-DHJ" secondAttribute="trailing" constant="-4" id="drT-ko-884"/>
                             <constraint firstItem="lUc-He-pSt" firstAttribute="top" secondItem="x6L-SI-DHJ" secondAttribute="bottom" constant="20" id="dvA-3R-ifa"/>
                             <constraint firstItem="OTx-QF-lEJ" firstAttribute="centerX" secondItem="wAR-AJ-9Qm" secondAttribute="centerX" id="nPu-wW-GQR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lUc-He-pSt" secondAttribute="trailing" id="pjg-CW-J1N"/>
@@ -375,7 +394,7 @@
                             <constraint firstItem="x6L-SI-DHJ" firstAttribute="top" secondItem="NVN-Nq-3Qg" secondAttribute="bottom" constant="15" id="y23-ks-99M"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Available Languages" id="Q9X-R6-lFC">
+                    <navigationItem key="navigationItem" title="Languages" id="Q9X-R6-lFC">
                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="mbp-3U-rtH">
                             <connections>
                                 <action selector="cancelButtonClicked:" destination="1EN-bj-YEj" id="gGb-Ar-CBK"/>
@@ -393,44 +412,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2M-4J-nvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2022" y="-375"/>
-        </scene>
-        <!--PRUEBA-->
-        <scene sceneID="Dxg-rn-EqI">
-            <objects>
-                <viewController title="PRUEBA" id="MUZ-Zi-ncK" customClass="LanguagesTableViewController" customModule="Pic_Translate" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jM8-YD-Gg2"/>
-                        <viewControllerLayoutGuide type="bottom" id="1Ry-f5-NLX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fM9-c5-J1k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p4p-Nf-nkS">
-                                <rect key="frame" x="20" y="20" width="374" height="696"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="2xd-mo-Lc2">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2xd-mo-Lc2" id="Sdw-Gf-GUS">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="tableView" destination="p4p-Nf-nkS" id="Fij-hR-hhU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wgU-i4-rZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1503" y="579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bbU-MT-tMD">
