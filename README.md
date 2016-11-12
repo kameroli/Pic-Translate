@@ -7,7 +7,7 @@ Image recognition. Clarifai API Licensed under the Apache License, Version 2.0  
 Icons and Art. Lauraviloli - Graphic Designer   https://issuu.com/lauralopez
 
 
-You can download it in the App Store. 
+You can download it at the App Store. 
 https://itunes.apple.com/us/app/pic+translate/id1164958740?ls=1&mt=8
 
 
