@@ -13,6 +13,7 @@ class TranslateViewController: UIViewController, UIPopoverPresentationController
     
     @IBOutlet weak var availableLanguages: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    var token : String?
     
     
     override func viewDidLoad() {
@@ -23,6 +24,15 @@ class TranslateViewController: UIViewController, UIPopoverPresentationController
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Read last language used
+        token = NSUserDefaults.standardUserDefaults().objectForKey("lastLanguage") as? String
+       
+        if token != nil{
+            selectedLanguage = token!
+        }else{
+            selectedLanguage = "en"
+        }
         
     }
 

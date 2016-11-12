@@ -156,21 +156,22 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
             textView.text = "Recognizing..."
             button.enabled = false
             recognizeImage(image)
-           
         }
     }
-
     private func recognizeImage(image: UIImage!) {
         // Scale down the image. This step is optional. However, sending large images over the
         // network is slow and does not significantly improve recognition performance.
-        let size = CGSizeMake(320, 320 * image.size.height / image.size.width)
+        print(image.size.width)
+        print(image.size.height)
+        
+        let size = CGSizeMake(380, 320 * image.size.height / image.size.width)   //size 380, 320
         UIGraphicsBeginImageContext(size)
         image.drawInRect(CGRectMake(0, 0, size.width, size.height))
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
         // Encode as a JPEG.
-        let jpeg = UIImageJPEGRepresentation(scaledImage, 0.9)!
+        let jpeg = UIImageJPEGRepresentation(scaledImage!, 0.9)!
 
         // Send the JPEG to Clarifai for standard image tagging.
         client.recognizeJpegs([jpeg]) {
@@ -178,8 +179,9 @@ class SwiftRecognitionViewController : UIViewController, UIImagePickerController
             if error != nil {
                 print("Error: \(error)\n")
                 self.textView.text = "Sorry, there was an error recognizing your image."
+                self.translateButton.enabled = false
             } else {
-                self.textView.text = "Words:\n\n" + results![0].tags.joinWithSeparator(", ")
+                self.textView.text = "\n" + results![0].tags.joinWithSeparator(", ")
                 arrayOfTags = results![0].tags
                 self.translateButton.enabled = true
                 

@@ -16,7 +16,7 @@ class AboutUsViewController: UIViewController {
     
     override func viewDidLoad() {
         
-     aboutTextView.text = "Pic + Translate is an app created to help people who want to increase their english vocabulary by indentifying the content of pictures and describing them with words that will be translated into the language chosen"
+     aboutTextView.text = "Pic + Translate is an app created to help people who want to increase their English vocabulary by indentifying the content of pictures and describing them with words that will be translated into the language chosen"
         
         super.viewDidLoad()
 
@@ -24,12 +24,20 @@ class AboutUsViewController: UIViewController {
     }
     
     
-    @IBAction func openLink(sender: AnyObject) {
-        
+    @IBAction func openYandex(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string:"http://translate.yandex.com/")!)
         
     }
+
     
+    @IBAction func openClarifai(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string:"https://clarifai.com/")!)
+    }
+    
+    
+    @IBAction func openLau(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string:"https://issuu.com/lauralopez")!)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

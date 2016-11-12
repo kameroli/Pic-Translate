@@ -69,7 +69,6 @@ class WordsTableViewCell: UITableViewCell {
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as? [String: AnyObject]
                 
                 if let translatedW = json!["text"] as? [String]{
-                    //print(translatedW.count)
                     
                     if translatedW.count > 1{
                         wordInOtherLanguage = translatedW.joinWithSeparator(" ")}else{

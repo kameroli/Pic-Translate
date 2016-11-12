@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-var selectedLanguage = "en"
+var selectedLanguage : String = String()
 var languageName = "English"
 
 class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource, UITableViewDelegate {
@@ -22,7 +22,7 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var recentLanguagesStored:[(longName:String, shortName: String)] = []
     var showRecentLanguages:[(longName:String, shortName: String)] = []
     let languageCellIdentifier = "LanguageCell"
-    
+    var pickerSelected = ""
     
     
     
@@ -49,10 +49,10 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         languagePicker.selectRow(11, inComponent: 0, animated: false)
         showRecentLanguages = recentLanguagesStored.reverse()
-
+     
     }
     
-    
+
     @IBAction func cancelButtonClicked(sender: AnyObject) {
         
      self.navigationController?.popViewControllerAnimated(true)
@@ -61,6 +61,8 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     //Save selected language in Database
     @IBAction func saveSelectedLanguage(sender: UIButton) {
+        
+        selectedLanguage = pickerSelected
         
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -139,7 +141,10 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }catch{ //First do{}
             print("Fetch failed")
         }
-    
+        
+        //Saving languge for next time user uses the app
+        NSUserDefaults.standardUserDefaults().setObject(selectedLanguage, forKey: "lastLanguage")
+        NSUserDefaults.standardUserDefaults().synchronize()
         
         self.navigationController?.popViewControllerAnimated(true)
         
@@ -212,7 +217,8 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
        
-        selectedLanguage = pickerData[row].short
+        //selectedLanguage = pickerData[row].short
+        pickerSelected = pickerData[row].short
         languageName = pickerData[row].language
         
     }
@@ -243,7 +249,10 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
        
         selectedLanguage = showRecentLanguages[indexPath.row].shortName
-
+        
+        //Saving languge for next time user uses the app
+        NSUserDefaults.standardUserDefaults().setObject(selectedLanguage, forKey: "lastLanguage")
+        NSUserDefaults.standardUserDefaults().synchronize()
         
         self.navigationController?.popViewControllerAnimated(true)
     }

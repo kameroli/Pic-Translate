@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F4212791D4ED3C200936AF5 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4212781D4ED3C200936AF5 /* LanguageViewController.swift */; };
 		0F88D1D41D6A2A6E00C14492 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88D1D31D6A2A6E00C14492 /* TranslateViewController.swift */; };
-		0F9399461D8CEF8700D2F682 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9399451D8CEF7500D2F682 /* Montserrat-Light.otf */; };
 		0F9DBF5D1D80F0FB00CD234B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9DBF5C1D80F0FB00CD234B /* AboutUsViewController.swift */; };
 		0FCC9ABA1D9C942D00837EE6 /* RecentLanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC9AB91D9C942D00837EE6 /* RecentLanguageTableViewCell.swift */; };
 		36A0125DEE5884EC15373B84 /* Pods_ClarifaiApiDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA718DB5DA0E30D572830BB1 /* Pods_ClarifaiApiDemoTests.framework */; };
@@ -21,8 +20,8 @@
 		408D39691BACA1FA00C5608B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408D39671BACA1FA00C5608B /* LaunchScreen.xib */; };
 		408D39751BACA1FA00C5608B /* ClarifaiApiDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 408D39741BACA1FA00C5608B /* ClarifaiApiDemoTests.m */; };
 		7846BAC7A3C56B5C0E20BAF1 /* Pods_ClarifaiApiDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606A3D9F6DBE870344597089 /* Pods_ClarifaiApiDemo.framework */; };
+		AE8BFC341DA878F800153C77 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE8BFC331DA878E400153C77 /* Montserrat-Light.otf */; };
 		B7545A191CE1498D00506865 /* WordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7545A181CE1498D00506865 /* WordsTableViewCell.swift */; };
-		B7545A1F1CE21B2300506865 /* ImageWordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7545A1E1CE21B2300506865 /* ImageWordsTableViewController.swift */; };
 		B7A373951CE23258006F079D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A373941CE23258006F079D /* AppDelegate.swift */; };
 		B7A373981CE23E3E006F079D /* MultimediaData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7A373961CE23E3E006F079D /* MultimediaData.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		06C88956055C6982611A7FF8 /* Pods-ClarifaiApiDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemo/Pods-ClarifaiApiDemo.release.xcconfig"; sourceTree = "<group>"; };
 		0F4212781D4ED3C200936AF5 /* LanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		0F88D1D31D6A2A6E00C14492 /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
-		0F9399451D8CEF7500D2F682 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.otf"; path = "../../../../../Downloads/montserrat/Montserrat-Light.otf"; sourceTree = "<group>"; };
 		0F9DBF5C1D80F0FB00CD234B /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		0FCC9AB91D9C942D00837EE6 /* RecentLanguageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentLanguageTableViewCell.swift; sourceTree = "<group>"; };
 		4032B3FD1C57AEBA0093FA9E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
@@ -62,8 +60,8 @@
 		6A34A1ADE597D92D5AA9B83D /* Pods-ClarifaiApiDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A283566DAB497300E6F3247D /* Pods-ClarifaiApiDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemoTests/Pods-ClarifaiApiDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A908115AD0BDC7A9E69A8BE4 /* Pods-ClarifaiApiDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClarifaiApiDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClarifaiApiDemo/Pods-ClarifaiApiDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AE8BFC331DA878E400153C77 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = SOURCE_ROOT; };
 		B7545A181CE1498D00506865 /* WordsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsTableViewCell.swift; sourceTree = "<group>"; };
-		B7545A1E1CE21B2300506865 /* ImageWordsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWordsTableViewController.swift; sourceTree = "<group>"; };
 		B7A373941CE23258006F079D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A373971CE23E3E006F079D /* MultimediaData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MultimediaData.xcdatamodel; sourceTree = "<group>"; };
 		EA718DB5DA0E30D572830BB1 /* Pods_ClarifaiApiDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClarifaiApiDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +90,7 @@
 		0F6F73D61D5F967B008FD017 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0F9399451D8CEF7500D2F682 /* Montserrat-Light.otf */,
+				AE8BFC331DA878E400153C77 /* Montserrat-Light.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -102,7 +100,6 @@
 			children = (
 				408D39571BACA1FA00C5608B /* Pic+Translate */,
 				408D39711BACA1FA00C5608B /* Pic+TranslateTests */,
-				408D39561BACA1FA00C5608B /* Products */,
 				6D4B90856A363A13D85041E7 /* Pods */,
 				C8882B3485299FED755D0599 /* Frameworks */,
 			);
@@ -115,6 +112,7 @@
 				408D396E1BACA1FA00C5608B /* Pic+Translate.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		408D39571BACA1FA00C5608B /* Pic+Translate */ = {
@@ -125,10 +123,10 @@
 				404EFC741BACA33F009D4381 /* ClarifaiClient.h */,
 				404EFC751BACA33F009D4381 /* ClarifaiClient.m */,
 				4032B3FD1C57AEBA0093FA9E /* Credentials.swift */,
+				408D39561BACA1FA00C5608B /* Products */,
 				4088A4371BAEF1B500B1C682 /* SwiftRecognitionViewController.swift */,
 				408D39621BACA1FA00C5608B /* Main.storyboard */,
 				0F9DBF5C1D80F0FB00CD234B /* AboutUsViewController.swift */,
-				B7545A1E1CE21B2300506865 /* ImageWordsTableViewController.swift */,
 				B7545A181CE1498D00506865 /* WordsTableViewCell.swift */,
 				0F4212781D4ED3C200936AF5 /* LanguageViewController.swift */,
 				0FCC9AB91D9C942D00837EE6 /* RecentLanguageTableViewCell.swift */,
@@ -242,15 +240,18 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Clarifai, Inc.";
 				TargetAttributes = {
 					408D39541BACA1FA00C5608B = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = RKSQ673M97;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					408D396D1BACA1FA00C5608B = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 						TestTargetID = 408D39541BACA1FA00C5608B;
 					};
 				};
@@ -279,7 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F9399461D8CEF8700D2F682 /* Montserrat-Light.otf in Resources */,
+				AE8BFC341DA878F800153C77 /* Montserrat-Light.otf in Resources */,
 				408D39641BACA1FA00C5608B /* Main.storyboard in Resources */,
 				408D39691BACA1FA00C5608B /* LaunchScreen.xib in Resources */,
 				408D39661BACA1FA00C5608B /* Images.xcassets in Resources */,
@@ -403,7 +404,6 @@
 				0F88D1D41D6A2A6E00C14492 /* TranslateViewController.swift in Sources */,
 				0F4212791D4ED3C200936AF5 /* LanguageViewController.swift in Sources */,
 				4088A4381BAEF1B500B1C682 /* SwiftRecognitionViewController.swift in Sources */,
-				B7545A1F1CE21B2300506865 /* ImageWordsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,8 +458,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -485,6 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "6b25bde2-d292-482d-b899-7814115fafac";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -502,8 +505,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -521,7 +526,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "6b25bde2-d292-482d-b899-7814115fafac";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -530,18 +537,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A908115AD0BDC7A9E69A8BE4 /* Pods-ClarifaiApiDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = RKSQ673M97;
 				INFOPLIST_FILE = ClarifaiApiDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clarifai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Pic+Translate";
+				PROVISIONING_PROFILE = "6b25bde2-d292-482d-b899-7814115fafac";
+				PROVISIONING_PROFILE_SPECIFIER = PicTranslateDevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "ClarifaiApiDemo/ClarifaiApiDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -549,17 +560,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06C88956055C6982611A7FF8 /* Pods-ClarifaiApiDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = RKSQ673M97;
 				INFOPLIST_FILE = ClarifaiApiDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clarifai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Pic+Translate";
+				PROVISIONING_PROFILE = "6b25bde2-d292-482d-b899-7814115fafac";
+				PROVISIONING_PROFILE_SPECIFIER = PicTranslateDevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "ClarifaiApiDemo/ClarifaiApiDemo-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -567,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A283566DAB497300E6F3247D /* Pods-ClarifaiApiDemoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -577,7 +593,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clarifai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Pic+Translate";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClarifaiApiDemo.app/ClarifaiApiDemo";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pic+Translate.app/Pic+Translate";
 			};
 			name = Debug;
 		};
@@ -585,13 +602,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A34A1ADE597D92D5AA9B83D /* Pods-ClarifaiApiDemoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ClarifaiApiDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clarifai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Pic+Translate";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClarifaiApiDemo.app/ClarifaiApiDemo";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pic+Translate.app/Pic+Translate";
 			};
 			name = Release;
 		};
