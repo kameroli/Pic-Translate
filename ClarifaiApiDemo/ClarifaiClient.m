@@ -12,7 +12,6 @@
 static NSString * const kApiBaseUrl = @"https://api.clarifai.com/v1";
 static NSString * const kErrorDomain = @"com.clarifai.ClarifaiClient";
 static NSString * const kKeyAccessToken = @"com.clarifai.ClarifaiClient.AccessToken";
-//static NSString * const kKeyAccessToken = @"jAndwKZI7XCKwsGNziKXRGbVxVEGPm";
 static NSString * const kKeyAppID = @"com.clarifai.ClarifaiClient.AppID";
 static NSString * const kKeyAccessTokenExpiration = @"com.clarifai.ClarifaiClient.AccessTokenExpiration";
 static NSTimeInterval const kMinTokenLifetime = 60.0;
